@@ -72,8 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
               showLabel: true,
               textOverflow: TextOverflow.visible,
               maxLine: 1,
-              shadowElevation: 5,
-              kBottomRadius: 28.0,
+              shadowElevation: 3,
+              kBottomRadius: 0.0,
+              shadowColor: Colors.red,
 
               // notchShader: const SweepGradient(
               //   startAngle: 0,
@@ -81,16 +82,16 @@ class _MyHomePageState extends State<MyHomePage> {
               //   colors: [Colors.red, Colors.green, Colors.orange],
               //   tileMode: TileMode.mirror,
               // ).createShader(Rect.fromCircle(center: Offset.zero, radius: 8.0)),
-              notchColor: Colors.black87,
+              notchColor: Colors.red,
 
               /// restart app if you change removeMargins
-              removeMargins: false,
+              removeMargins: true,
               bottomBarWidth: 500,
-              showShadow: false,
+              showShadow: true,
               durationInMilliSeconds: 300,
-
+              showTopRadius: true,
               itemLabelStyle: const TextStyle(fontSize: 10),
-
+              bottomBarHeight: 70,
               elevation: 1,
               bottomBarItems: const [
                 BottomBarItem(
@@ -100,9 +101,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   activeItem: Icon(
                     Icons.home_filled,
-                    color: Colors.blueAccent,
+                    color: Colors.white,
                   ),
-                  itemLabel: 'Page 1',
+                  itemLabel: 'Inicio',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(Icons.star, color: Colors.blueGrey),
@@ -110,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Icons.star,
                     color: Colors.blueAccent,
                   ),
-                  itemLabel: 'Page 2',
+                  itemLabel: 'Transferir',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
@@ -121,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Icons.settings,
                     color: Colors.pink,
                   ),
-                  itemLabel: 'Page 3',
+                  itemLabel: 'Movimientos',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
@@ -132,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Icons.person,
                     color: Colors.yellow,
                   ),
-                  itemLabel: 'Page 4',
+                  itemLabel: 'Ajustes',
                 ),
               ],
               onTap: (index) {
@@ -184,7 +185,7 @@ class Page3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.red, child: const Center(child: Text('Page 3')));
+    return Container(color: Colors.white, child: const Center(child: Text('Page 3')));
   }
 }
 

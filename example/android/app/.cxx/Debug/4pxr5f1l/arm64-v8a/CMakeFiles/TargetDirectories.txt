@@ -1,0 +1,2 @@
+C:/laragon/www/git_casa_cambio/better_animated_bottom_bar/example/android/app/.cxx/Debug/4pxr5f1l/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/laragon/www/git_casa_cambio/better_animated_bottom_bar/example/android/app/.cxx/Debug/4pxr5f1l/arm64-v8a/CMakeFiles/rebuild_cache.dir

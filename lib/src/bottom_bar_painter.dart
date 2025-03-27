@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'constants/constants.dart';
 
 class BottomBarPainter extends CustomPainter {
+  final Color? shadowColor;
   BottomBarPainter({
     required this.position,
     required this.color,
@@ -13,6 +14,7 @@ class BottomBarPainter extends CustomPainter {
     this.shadowElevation,
     this.shader,
     this.gradient,
+    this.shadowColor,
   })  : _paint = Paint()
           ..color = color
           ..isAntiAlias = true,
@@ -88,16 +90,16 @@ class BottomBarPainter extends CustomPainter {
       ..lineTo(position - kTopRadius, top)
       ..relativeArcToPoint(
         Offset(kTopRadius, kTopRadius),
-        radius: Radius.circular(kTopRadius),
+        radius: Radius.circular(kTopRadius+15),
       )
       ..relativeArcToPoint(
-        const Offset((kCircleRadius + kCircleMargin) * 2, 0.0),
+        const Offset((kCircleRadius + kCircleMargin - 0.2) * 2, 0.0),
         radius: const Radius.circular(kCircleRadius + kCircleMargin),
         clockwise: false,
       )
       ..relativeArcToPoint(
         Offset(kTopRadius, -kTopRadius),
-        radius: Radius.circular(kTopRadius),
+        radius: Radius.circular(kTopRadius+15),
       )
       ..lineTo(right - kTopRadius, top)
       ..relativeArcToPoint(
@@ -120,7 +122,7 @@ class BottomBarPainter extends CustomPainter {
         radius: Radius.circular(kTopRadius),
       );
     if (this.showShadow) {
-      canvas..drawShadow(path, _shadowColor, shadowElevation ?? 5, true);
+      canvas..drawShadow(path, shadowColor ?? _shadowColor, shadowElevation ?? 5, false);
     }
     canvas.drawPath(path, _paint);
   }
@@ -140,7 +142,7 @@ class BottomBarPainter extends CustomPainter {
         kPi * 2,
       );
     if (this.showShadow) {
-      canvas..drawShadow(path, _shadowColor, shadowElevation ?? 5.0, true);
+      canvas..drawShadow(path, shadowColor ?? _shadowColor, shadowElevation ?? 5.0, true);
     }
     shader != null
         ? canvas.drawPath(path, _notchPaint..shader = shader)

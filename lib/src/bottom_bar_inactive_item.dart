@@ -62,18 +62,18 @@ class BottomBarInActiveItem extends StatelessWidget {
       child: Container(
         color: Colors.transparent,
         child: SizedBox.fromSize(
-          size: const Size(kCircleRadius * 2, kCircleRadius * 2),
+          size: const Size((kCircleRadius * 2)+ 5, kCircleRadius * 2),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SizedBox(height: kIconSize, width: kIconSize, child: itemWidget),
               if (labelWidget != null || (label != null && showLabel)) ...[
-                const SizedBox(height: 5.0),
+                const SizedBox(height: 10.0),
                 labelWidget ??
                     Text(
                       label!,
                       maxLines: maxLine ?? 1,
-                      overflow: textOverflow ?? TextOverflow.ellipsis,
+                      overflow: textOverflow ?? TextOverflow.visible,
                       textAlign: textAlign,
                       textDirection: textDirection,
                       style: labelStyle ??

@@ -99,6 +99,8 @@ class AnimatedNotchBottomBar extends StatefulWidget {
   /// set top margin
   final double topMargin;
 
+  final Color? shadowColor;
+
   const AnimatedNotchBottomBar({
     Key? key,
     required this.notchBottomBarController,
@@ -131,6 +133,7 @@ class AnimatedNotchBottomBar extends StatefulWidget {
     this.textDirection,
     this.topMargin = 10.0,
     this.circleMargin = 8.0,
+    this.shadowColor,
   }) : super(key: key);
 
   @override
@@ -236,6 +239,7 @@ class _AnimatedNotchBottomBarState extends State<AnimatedNotchBottomBar> with Si
                                 shadowElevation: widget.shadowElevation,
                                 kBottomRadius: widget.kBottomRadius,
                                 gradient: widget.notchGradient,
+                                shadowColor: widget.shadowColor,
                                 elevation: widget.elevation),
                           ),
                         ),
@@ -244,13 +248,16 @@ class _AnimatedNotchBottomBarState extends State<AnimatedNotchBottomBar> with Si
                         if (i == currentIndex && (_animationController.value == 1.0 || _isInitial))
                           Positioned(
                             top: widget.removeMargins ? -widget.circleMargin / 2 : widget.topMargin,
-                            left: kCircleRadius - widget.topMargin / 2 + _itemPosByScrollPosition(scrollPosition) + 2,
+                            left: (kCircleRadius - widget.topMargin / 2 + _itemPosByScrollPosition(scrollPosition) + 2) - 20,
                             child: BottomBarActiveItem(
                               i,
+                              showLabel: true,
+                              label: widget.bottomBarItems[i].itemLabel,
                               itemWidget: widget.bottomBarItems[i].activeItem,
                               scrollPosition: scrollPosition,
                               onTap: widget.onTap,
                               kIconSize: widget.kIconSize,
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         if (i != currentIndex)
