@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
+import 'package:better_animated_bottom_bar/better_animated_bottom_bar/better_animated_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {

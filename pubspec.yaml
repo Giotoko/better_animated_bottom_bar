@@ -1,7 +1,8 @@
 name: better_animated_bottom_bar
 description: This package helps you to achieve animated notch bottom navigation bar with any widget as children.
 version: 1.0.3
-repository : https://github.com/Giotoko/better_animated_bottom_bar
+homepage: https://jhonaiquel.com
+repository: https://github.com/Giotoko/better_animated_bottom_bar
 issue_tracker: https://github.com/Giotoko/better_animated_bottom_bar/issues
 
 environment:
