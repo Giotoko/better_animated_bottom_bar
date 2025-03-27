@@ -91,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
               durationInMilliSeconds: 300,
               showTopRadius: true,
               itemLabelStyle: const TextStyle(fontSize: 10),
+              activeLabelStyle: const TextStyle(color: Colors.red),
               bottomBarHeight: 70,
               elevation: 1,
               bottomBarItems: const [

@@ -32,6 +32,9 @@ class AnimatedNotchBottomBar extends StatefulWidget {
   /// TextStyle to show bottom text
   final TextStyle? itemLabelStyle;
 
+    /// TextStyle to show active item
+  final TextStyle? activeLabelStyle;
+
   ///Boolean to show blur effect
   final bool showBlurBottomBar;
 
@@ -109,6 +112,7 @@ class AnimatedNotchBottomBar extends StatefulWidget {
     required this.kIconSize,
     this.color = Colors.white,
     this.itemLabelStyle,
+    this.activeLabelStyle,
     this.shadowElevation,
     this.showShadow = true,
     this.showLabel = true,
@@ -258,6 +262,7 @@ class _AnimatedNotchBottomBarState extends State<AnimatedNotchBottomBar> with Si
                               onTap: widget.onTap,
                               kIconSize: widget.kIconSize,
                               textAlign: TextAlign.center,
+                              activeLabelStyle: widget.activeLabelStyle,
                             ),
                           ),
                         if (i != currentIndex)

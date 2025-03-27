@@ -11,7 +11,7 @@ class BottomBarActiveItem extends StatelessWidget {
     required this.kIconSize,
     required this.showLabel,
     this.label,
-    this.labelStyle,
+    this.activeLabelStyle,
     this.labelWidget,
     this.maxLine,
     this.textOverflow,
@@ -40,7 +40,7 @@ class BottomBarActiveItem extends StatelessWidget {
   final bool showLabel;
 
   /// Value to indicate the label Style
-  final TextStyle? labelStyle;
+  final TextStyle? activeLabelStyle;
 
   /// set the maxLine of item label
   final int? maxLine;
@@ -90,7 +90,7 @@ class BottomBarActiveItem extends StatelessWidget {
                         overflow: textOverflow ?? TextOverflow.visible,
                         textAlign: textAlign,
                         textDirection: textDirection,
-                        style: labelStyle ??
+                        style: activeLabelStyle ??
                             TextStyle(
                               color: Colors.grey[700],
                               fontSize: 12.0,
