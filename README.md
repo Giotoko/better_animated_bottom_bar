@@ -1,4 +1,8 @@
-# Animated Notch Bottom Bar
+# Better Animated Bottom Bar
+
+this is a Fork from 
+[Animated Notch Bottom Bar](https://pub.dev/packages/animated_notch_bottom_bar). the only adding was keeping the label on active items everything remains the same
+
 <a href="https://pub.dev/packages/animated_notch_bottom_bar"><img src="https://img.shields.io/pub/v/animated_notch_bottom_bar.svg?label=animated_notch_bottom_bar" alt="animated_notch_bottom_bar version"></a>
 <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/flutter-website-deepskyblue.svg" alt="Flutter Website"></a>
 <a href="https://dart.dev"><img src="https://img.shields.io/badge/dart-website-deepskyblue.svg" alt="Dart Website"></a>
